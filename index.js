@@ -23,6 +23,20 @@ var connection = mysql.createConnection({
     database: 'ele_com'
 });
 connection.connect();
+// 定时查询数据库一次，保证mysql八小时内通信一次
+function interal()
+{
+    var chat_interal = 'SELECT * FROM user';
+    var data_interal = [];
+    connection.query(chat_interal, data_interal, function (err, result) {
+        if (err) {
+            console.log('查询管理员数据 error---', err.message);
+            return;
+        }
+        console.log('hello')        
+    })
+}
+setInterval(interal,3600000);
 
 //  定义一个map存储各个账号及其token
 var map_token = new Map();
@@ -174,60 +188,8 @@ app.post("/login", function (req, res) {
             });
         }
     })
-
-
-    //  connection.end();
-
-    //  对密码进行加密
-    //  password = crypto.createHmac("md5", "cyl").update(password).digest("hex"); //加盐然后加密 （准确应该是摘要）
-
-    //  查找数据库
-    //  User.findOne({ username }, function(err, doc) {
-    //      if (err) { //对错误处理
-    //      }
-    //      if (doc) { //查询数据库发现存在 那么就到个人页面
-    //          if (doc.password === password) { //如果密码也匹配
-    //              res.cookie("username", username);
-    //              res.redirect("/main");
-    //              res.end();
-    //          } else {
-
-    //              res.render("error");
-    //          }
-    //      } else {
-    //          res.redirect("/register"); //如果不存在 那么就到注册页面
-    //      }
-    //  })     
-
 });
-// 管理系统的接口↓
-// get请求返回管理界面
-// app.get("/manager", manager_isLogin, function (req, res) {
-//     fs.readFile('./manager.html', function (err, data) {
-//         if (err) {
-//             console.log(err);
-//             //HTTP 状态码 404 ： NOT FOUND
-//             //Content Type:text/plain
-//             res.writeHead(404, {
-//                 'Content-Type': 'text/html',
-//                 'Cache-Control': 'no-store'
-//             });
-//         } else {
-//             //HTTP 状态码 200 ： OK
-//             //Content Type:text/plain
-//             res.writeHead(200, {
-//                 'Content-Type': 'text/html',
-//                 'Cache-Control': 'no-store'
-//             });
 
-//             //写会回相应内容
-//             res.write(data);
-//         }
-//         //发送响应数据
-//         res.end();
-//     })
-
-// })
 // 利用express模块化来写数据接口
 const admin_route = express.Router();
 // 将路由和请求路径进行匹配
@@ -1157,19 +1119,7 @@ app.get('*', isLogin, function (req, res, text) {
             //发送响应数据
             res.end();
         });
-    }
-    // 访问这个端口的话，就访问数据库
-    // else if (req.url == '/login') {
-    //     var mysql = require('../lib/node_modules/mysql');
-    //     var connection = mysql.createConnection({
-    //         host: 'localhost',
-    //         user: 'root',
-    //         password: '582825762w',
-    //         database: 'home'
-    //     });
-    //     connection.connect();
-    //     console.log(req.data)
-    // } 
+    }    
     else {
         //解析请求，包括文件名
         var pathname = url.parse(req.url).pathname;
@@ -1242,6 +1192,6 @@ app.use((req, res, next) => {
     console.log('hello')
 })
 
-app.listen(80, () => {
-    console.log("http://localhost:80已经打开")
+app.listen(800, () => {
+    console.log("http://localhost:800已经打开")
 });
