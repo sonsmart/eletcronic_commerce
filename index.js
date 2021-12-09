@@ -244,30 +244,29 @@ admin_route.get('/api/buy.json',manager_isLogin, function (req, res, text) {
                     })
                 }
             })               
-        } else {
-            res.write({status:0});           
+        } else {                   
             res.end()  
         }        
     })   
    
 })
 // 返回浏览记录
-admin_route.get('/api/visit.json',manager_isLogin, function (req, res, text) {    
+admin_route.get('/api/visit.json',manager_isLogin, function (req, res, text) {        
     //  查询结果
     let chat_result;
     // 查询所有数据
-    var chat = 'SELECT a.username,a.phone,a.e_mail, b.book_name,c.view_number FROM user a,goods b,user_view c where a.phone = c.phone and c.goods_number = b.goods_number';   
+    var chat = 'SELECT a.username,a.phone,a.e_mail, b.book_name,c.view_number FROM user a,goods b,user_view c where a.phone = c.phone and c.goods_number = b.goods_number;';   
     data = []
     res.writeHead(200, {
         'Content-Type': 'text/json',
         'Cache-Control': 'no-store'
     });   
-    connection.query(chat, data, function (err, result) {
+    connection.query(chat, data, function (err, result) {   
         if (err) {
             console.log('查询浏览数据 error---', err.message);
             return;
         }
-        if (result.length != 0) {
+        if (result.length != 0) {            
             console.log('浏览信息查询成功');            
             let ans = {
                 "code":0,
@@ -301,8 +300,7 @@ admin_route.get('/api/visit.json',manager_isLogin, function (req, res, text) {
                     })
                 }
             })               
-        } else {
-            res.write({status:0});           
+        } else {                        
             res.end()  
         }        
     })   
@@ -1046,7 +1044,16 @@ each_route.post('/buy_a_time', isLogin, function (req, res) {
     let { rev_name, rev_license, rev_phone, rev_place, payment_style, goods_number, buy_num } = req.body;
     const { token } = req.cookies;
     let phone = map_token.get(token.toString());
-
+    //修改存量
+    update = `update goods set sales_volume = sales_volume+1,storage = storage-1 where goods_number=?;`;
+    data = [goods_number];
+    connection.query(update, data, function (err, result) {
+        if (err) {
+            console.log('更新商品库存和销量[SELECT ERROR] - ', err.message);
+            return;
+        }
+        console.log('更新商品库存和销量成功');
+    })
     // 创建新的购物车
     let temp = (new Date().getTime() * 2).toString();
     let pay_time = new Date().getFullYear()+'年'+(new Date().getMonth()+1)+'月'+new Date().getDate()+'日'+new Date().getHours()+':'+new Date().getMinutes()+':'+new Date().getSeconds();
@@ -1060,6 +1067,7 @@ each_route.post('/buy_a_time', isLogin, function (req, res) {
         }
         console.log("创建购物车成功");
     });
+    // 更新购买记录
     insert = 'insert into  order_goods(goods_number,buy_num,order_num) values(?,?,?);';
     var data = [goods_number, buy_num, temp]
     connection.query(insert, data, function (err, result) {
@@ -1089,7 +1097,7 @@ each_route.post('/buy_a_time', isLogin, function (req, res) {
             return;
         }
     })
-})
+}) 
 // 返回其他数据和页面
 app.get('*', isLogin, function (req, res, text) {
     //从文件系统中去请求的文件内容.

@@ -20,7 +20,7 @@ window.onload = function() {
                         </div>
                         <div class="saleRow">
                             <div class="col fl">
-                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">` + all_data[i].price + `</span> </span>
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">` +all_data[i].now_price + `</span> </span>
                             </div>
                             <div class="col end fr">
                                 <span class="weekSale">月销量<span class="num">` + all_data[i].sales_volume + `</span></span>

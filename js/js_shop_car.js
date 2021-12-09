@@ -150,7 +150,8 @@ window.onload = function() {
             }
             for (let i = 0; i < data.length; i++) {
                 total_num += parseInt(data[i].buy_num);
-                total_price += parseInt(data[i].buy_num) * parseFloat(data[i].now_price);
+                total_price += parseInt(data[i].buy_num) * parseInt(data[i].now_price);
+                console.log(parseInt(data[i].now_price))  
                 new_content += `
                 <tbody class="hide">
                     <tr class="cart_item " hashid="d150603p892053zc" id="1057066_d150603p892053zc" product_id="892053" item_price="48.00" category_v3_3="18" brand_id="623" product_type="product">
@@ -158,7 +159,7 @@ window.onload = function() {
                             <div class="cart_item_desc clear">
                                 <input class="js_item_selector cart_item_selector" data-item-key="1057066_d150603p892053zc" checked="'checked'/" type="checkbox">
                                 <div class="cart_item_desc_wrapper">
-                                    <a class="cart_item_pic" href="http://sh.jumei.com/i/deal/d150603p892053zc.html" target="_blank"> <img src="./image/book/book_list4/list4_lit1.jpg" alt="世界那么大，我想去看看！"> <span class="sold_out_pic png"></span> </a> <a class="cart_item_link" title="世界那么大，我想去看看" href="http://sh.jumei.com/i/deal/d150603p892053zc.html"
+                                    <a class="cart_item_pic" href="" target="_blank"> <img src="`+data[i].thumbnail+`" alt="世界那么大，我想去看看！"> <span class="sold_out_pic png"></span> </a> <a class="cart_item_link" title="世界那么大，我想去看看" href=""
                                         target="_blank">` + data[i].book_name + `！</a>
                                     <p class="sku_info">规格：<span class="cart_item_attribute">彩色</span>&nbsp; </p>
                                     <div class="sale_info clear">
@@ -208,8 +209,7 @@ window.onload = function() {
                     </tr>
                 </tbody>`
             }
-
-
+                      
             new_content += `<tfoot>
         <tr>
         <td colspan="5"> 商品金额： <span class="group_total_price">￥` + total_price + `</span> </td>
