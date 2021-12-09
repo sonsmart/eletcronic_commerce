@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>图书在线 || bookshop</title>   
+    <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="./css/page.css" rel="stylesheet" type="text/css" />
+    <script src="./js/jquey-1.8.0.min.js"></script>
+    <script src="./js/goods_list.js"></script>
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <div id="top">
+        <div class="wrap clear">
+            <div class="welcome fl">
+                <span class="cor3">
+                    <!-- 欢迎光临，请
+                            <a title="会员直接登录" style="color:#FF2832;" target="_self" href="login.html" name="登录" title="请登录网站">登录</a> -->
+                            <a title="新用户请先注册" rel="nofollw" target="_self" href="inputRegisterMess.html" name="免费注册" title="免费注册当当账户">免费注册
+                            </a>
+                        </span>
+            </div>
+            <div class="topRight fr clear">
+                <ul class="leftNav fl">
+                    <li>
+                        <a class="padl10" title="查看购物车" name="购物车" href="lookShoppingCar.html">购物车</a>
+                        <span class="sep">|</span>
+                    </li>
+                    <!-- <li class="myOrder">
+                        <a title="查看我的订单" name="我的订单" href="lookOrderForm.html" target="_blank">我的订单</a>
+                        <i class="myLibIcon"></i>
+                        <span class="sep">|</span></li> -->
+                    <li class="myLib">
+                        <a title="进入我的个人主页" name="我的当当" href="login.html" target="_blank">我的图书馆</a>
+                        <i class="myLibIcon"></i>
+                        <div id="topLookTab">
+                            <ul class="looktabnav clear">
+                                <li class="">
+                                    <h4>经管励志</h4>
+                                    <div class="e">
+                                        <a href="byPageShow.html" target="_blank">励志成功</a>
+                                        <a href="" target="_blank">管理</a>
+                                        <a href="" target="_blank">经济</a>
+                                        <a href="" target="_blank">投资理财</a>
+                                        <a href="" target="_blank">心灵修养</a>
+                                        <a href="" target="_blank">职场</a>
+                                        <a href="" target="_blank">名人演说</a>
+                                        <a href="" target="_blank">金融</a>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <h4>经管励志</h4>
+                                    <div class="e">
+                                        <a href="" target="_blank">励志/成功</a>
+                                        <a href="" target="_blank">管理</a>
+                                        <a href="" target="_blank">经济</a>
+                                        <a href="" target="_blank">投资理财</a>
+                                        <a href="" target="_blank">心灵修养</a>
+                                        <a href="" target="_blank">职场</a>
+                                        <a href="" target="_blank">名人演说</a>
+                                        <a href="" target="_blank">金融</a>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <h4>经管励志</h4>
+                                    <div class="e">
+                                        <a href="" target="_blank">励志/成功</a>
+                                        <a href="" target="_blank">管理</a>
+                                        <a href="" target="_blank">经济</a>
+                                        <a href="" target="_blank">投资理财</a>
+                                        <a href="" target="_blank">心灵修养</a>
+                                        <a href="" target="_blank">职场</a>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <h4>经管励志</h4>
+                                    <div class="e">
+                                        <a href="" target="_blank">励志成功</a>
+                                        <a href="" target="_blank">管理</a>
+                                        <a href="" target="_blank">经济</a>
+                                        <a href="" target="_blank">投资理财</a>
+                                        <a href="" target="_blank">心灵修养</a>
+                                        <a href="" target="_blank">职场</a>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <h4>经管励志</h4>
+                                    <div class="e">
+                                        <a href="" target="_blank">励志成功</a>
+                                        <a href="" target="_blank">管理</a>
+                                        <a href="" target="_blank">经济</a>
+                                        <a href="" target="_blank">投资理财</a>
+                                        <a href="" target="_blank">心灵修养</a>
+                                        <a href="" target="_blank">职场</a>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <h4>经管励志</h4>
+                                    <div class="e">
+                                        <a href="" target="_blank">励志成功</a>
+                                        <a href="" target="_blank">管理</a>
+                                        <a href="" target="_blank">经济</a>
+                                        <a href="" target="_blank">投资理财</a>
+                                        <a href="" target="_blank">心灵修养</a>
+                                        <a href="" target="_blank">职场</a>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <h4>经管励志</h4>
+                                    <div class="e">
+                                        <a href="" target="_blank">励志成功</a>
+                                        <a href="" target="_blank">管理</a>
+                                        <a href="" target="_blank">经济</a>
+                                        <a href="" target="_blank">投资理财</a>
+                                        <a href="" target="_blank">心灵修养</a>
+                                        <a href="" target="_blank">职场</a>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <h4>经管励志</h4>
+                                    <div class="e">
+                                        <a href="" target="_blank">励志成功</a>
+                                        <a href="" target="_blank">管理</a>
+                                        <a href="" target="_blank">经济</a>
+                                        <a href="" target="_blank">投资理财</a>
+                                        <a href="" target="_blank">心灵修养</a>
+                                        <a href="" target="_blank">职场</a>
+                                    </div>
+                                </li>
+                                <ul>
+                        </div>
+                    </li>
+                    </ul>
+                    <ul class="rightNav fr">
+                        <li class="myInformation"><a title="登录网站" href="login.html">个人中心</a><i class="myLibIcon"></i><span class="sep">|</span> </li>
+                        <li><a title="退出系统" name="退出" href="login.html">退出</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /顶部导航 -->
+    <!-- logo与search区域 -->
+    <div id="logo_line" class="wrap clear">
+        <div class="search fr">
+            <form method="post" action="byPageShow.html">
+                <input type="text" name="searchMess" autocomplete="on" placeholder="时空图书" class="text gray">
+                <input type="submit" name="g" value="搜索" class="button" title="点击我搜索吧！">
+            </form>
+            <!-- <div class="shopCar">
+                        <span class="shopText">购物车</span>
+                        <span class="shopNum">0</span>
+                    </div> -->
+        </div>
+        <!-- 购物车盒子 -->
+        <div id="cart_box" class="cart_box fr clear">
+            <a id="cart" class="cart_link" rel="nofollow" href="lookShoppingCar.html">
+                <img src="./image/icon/cart.gif" width="28" height="28" class="cart_gif">
+                <span class="text">去购物车结算</span>
+                <span class="num" style="display: none;"></span>
+                <s class="icon_arrow_right"></s>
+            </a>
+            <div class="cart_content" id="cart_content">
+                <i class="cart-icons"></i>
+                <div class="cart_content_null" style="display: none;">购物车中还没有商品，
+                    <br>快去挑选心爱的商品吧！</div>
+                <div class="cart_content_all" style="display: none;">
+                    <div class="cart_left_time">已超过购物车商品保留时间，请尽快结算。</div>
+                    <div class="cart_content_center"></div>
+                    <div class="con_all">
+                        <div class="price_whole"><span>共<span class="num_all"></span>件商品</span>
+                        </div>
+                        <div><span class="price_gongji">共计<em>￥</em><span class="total_price">69</span></span><a href="lookShoppingCar.html" class="cart_btn" rel="nofollow">去购物车结算</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /logo与search区域 -->
+    <!-- 导航条 -->
+    <div id="navbar">
+        <div class="wrap clear">
+            <h3 class="navindex"><a href="index.html" title="图书在线，欢迎品读购买">图书在线</a></h3>
+            <ul>
+                <li class=""><a class="current" title="进入书店主页" href="index.html">主页</a></li>
+                <li class="today">
+                    <a title="浏览商品列表" href="byPageShow.html">浏览图书
+                                <em class="white_arrow"></em>
+                            </a>
+                    <div id="looktab">
+                        <ul class="looktabnav">
+                            <li class="">
+                                <h4>经管励志</h4>
+                                <div class="e">
+                                    <a href="" target="_blank">励志成功</a>
+                                    <a href="" target="_blank">管理</a>
+                                    <a href="" target="_blank">经济</a>
+                                    <a href="" target="_blank">投资理财</a>
+                                    <a href="" target="_blank">心灵修养</a>
+                                    <a href="" target="_blank">职场</a>
+                                    <a href="" target="_blank">名人演说</a>
+                                    <a href="" target="_blank">金融</a>
+                                </div>
+                            </li>
+                            <li class="">
+                                <h4>经管励志</h4>
+                                <div class="e">
+                                    <a href="" target="_blank">励志成功</a>
+                                    <a href="" target="_blank">管理</a>
+                                    <a href="" target="_blank">经济</a>
+                                    <a href="" target="_blank">投资理财</a>
+                                    <a href="" target="_blank">心灵修养</a>
+                                    <a href="" target="_blank">职场</a>
+                                    <a href="" target="_blank">名人演说</a>
+                                    <a href="" target="_blank">金融</a>
+                                </div>
+                            </li>
+                            <li class="">
+                                <h4>经管励志</h4>
+                                <div class="e">
+                                    <a href="" target="_blank">励志成功</a>
+                                    <a href="" target="_blank">管理</a>
+                                    <a href="" target="_blank">经济</a>
+                                    <a href="" target="_blank">投资理财</a>
+                                    <a href="" target="_blank">心灵修养</a>
+                                    <a href="" target="_blank">职场</a>
+                                    <a href="" target="_blank">名人演说</a>
+                                    <a href="" target="_blank">金融</a>
+                                </div>
+                            </li>
+                            <li class="">
+                                <h4>经管励志</h4>
+                                <div class="e">
+                                    <a href="" target="_blank">励志成功</a>
+                                    <a href="" target="_blank">管理</a>
+                                    <a href="" target="_blank">经济</a>
+                                    <a href="" target="_blank">投资理财</a>
+                                    <a href="" target="_blank">心灵修养</a>
+                                    <a href="" target="_blank">职场</a>
+                                    <a href="" target="_blank">名人演说</a>
+                                    <a href="" target="_blank">金融</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a title="查看购物车" href="lookShoppingCar.html">查看购物车</a></li>
+            </ul>
+            <div class="sales fr"></div>
+        </div>
+    </div>
+    <!-- /导航条 -->
+    <!-- 焦点图 -->
+    <!-- <div id="section" class="wrap clear">
+                <div class="leftArea">nav</div>
+                <div class="rightArea">
+                    <div class="imgTab clear">
+                        <ul class="imgList clear">
+                            <li><a href=""><img src="./image/bg1.jpg" alt=""></a></li>
+                            <li><a href=""><img src="./image/bg2.jpg" alt=""></a></li>
+                            <li><a href=""><img src="./image/bg3.jpg" alt=""></a></li>
+                            <li><a href=""><img src="./image/bg4.jpg" alt=""></a></li>
+                            <li><a href=""><img src="./image/bg5.jpg" alt=""></a></li>
+                            <li><a href=""><img src="./image/bg6.jpg" alt=""></a></li>
+                            <li><a href=""><img src="./image/bg7.jpg" alt=""></a></li>
+                        </ul>
+                        <div class="imgText">
+                            <p>旅游是一件很快乐的事情</p>
+                            </div>
+                            <p class="imgCtrl">
+                                <a class="active" href=""></a>
+                                <a href=""></a>
+                                <a href=""></a>
+                                <a href=""></a>
+                                <a href=""></a>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+    <!-- /焦点图  -->
+    <div id="content" class="wrap clear">
+        <div class="leftCont fl">
+            <!-- 筛选条件列表 -->
+            <div class="address wrap clear">
+                <div class="productNum fr">
+                    <span>共</span>
+                    <b>5937</b>
+                    <span>款产品</span>
+                </div>
+            </div>
+            <!-- /配送地址 -->
+            <!-- 商品列表区域 -->
+            <!-- <div class="productListWrap clear" id="all_goods">
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="showDetail.html" target="_blank">
+                            <img src="./image/book/book_list4/book_list4.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="showDetail.html" target="_blank">世界那么大，我想去看看
+                                        <span class="feature"><span class="featureItem">文艺文学 </span> <span class="featureItem"> 最畅销书籍</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">23</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book9.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book10.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book11.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book15.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book8.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book16.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book7.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book14.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book8.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book13.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book8.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book7.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book8.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book6.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book8.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book8.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book9.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book10.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book11.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book15.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book8.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book16.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="productItem">
+                    <div class="imgBox">
+                        <a href="" target="_blank">
+                            <img src="./image/book7.jpg" alt="" style="height:188px;width: 188px;">
+                        </a>
+                    </div>
+                    <div class="infoCont">
+                        <div class="titleRow">
+                            <a class="productTitle" title="" href="" target="_blank">智能手表
+                                        <span class="feature"><span class="featureItem">钻石流光镜面</span><span class="featureItem">超薄大屏</span></span>
+                                    </a>
+                        </div>
+                        <div class="saleRow">
+                            <div class="col fl">
+                                <span class="price"><span class="priceYue">约</span> <span class="priceSign">¥</span> <span class="priceNum">2036</span> </span>
+                            </div>
+                            <div class="col end fr">
+                                <span class="weekSale">月销量<span class="num">1799</span></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div> -->
+            <div class="productListWrap clear" id="all_goods">
+
+            </div>
+            <!-- /商品列表区域 -->
+            <!-- 分页码 -->
+            <div class="page wrap">
+                <p class="pageList">
+                    <a href="">上一页</a>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                    <a href="">6</a>
+                    <a href="">7</a>
+                    <a href="">8</a>
+                    <a href="">9</a>
+                    <a href="">…</a>
+                    <a href="">200</a>
+                    <a href="">下一页</a>
+                    <span>共</span>
+                    <span>200</span>
+                    <span>页</span>
+                    <span>到 第</span>
+                    <input type="text" />
+                    <span>页</span>
+                    <input type="submit" value="确定" />
+                </p>
+            </div>
+            <!-- /分页码 -->
+        </div>
+
+    </div>
+
+    <!-- 服务 -->
+    <div id="service-2014" clstag="h|keycount|2015|32a">
+        <div class="slogen clear">
+            <span class="item fore1">
+                    <i></i><b>多</b>品类齐全，轻松购物
+                </span>
+            <span class="item fore2">
+                    <i></i><b>快</b>多仓直发，极速配送
+                </span>
+            <span class="item fore3">
+                    <i></i><b>好</b>正品行货，精致服务
+                </span>
+            <span class="item fore4">
+                    <i></i><b>省</b>天天低价，畅选无忧
+                </span>
+        </div>
+
+        <!-- 底部备案号 -->
+        <div style="height: 50px; width: 100%;  margin-top: 100px;">
+            <div id="record" style="text-align:center; align-items:50px;margin:0 auto; ">
+                <a href="https://beian.miit.gov.cn" style="text-decoration: none; " class="myRecord">备案号:粤ICP备2021080647号</a>
+                <div>
+                    <a class="myRecord" style="text-decoration: none; " href="http://www.beian.gov.cn/portal/registerSystemInfo?spm=a2c4g.11186623.J_9220772140.112.ac5be7c2TKDyeR"><img src="http://47.93.223.110/picture/gongan" alt="">粤公网安备44011302003070</a>
+                </div>
+                <div>
+                    版权所有 © 华南理工大学大学 powered by lizicong
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

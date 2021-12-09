@@ -1,0 +1,40 @@
+{
+    "homeInfo": {
+        "title": "首页",
+        "href": "page/goods.html"
+    },
+    "logoInfo": {
+        "title": "admin管理系统",
+        "image": "./image/logo.png",
+        "href": ""
+    },
+    "menuInfo": [{
+            "title": "常规管理",
+            "icon": "fa fa-address-book",
+            "href": "",
+            "target": "_self",
+            "child": [{
+                "title": "商品管理",
+                "href": "page/goods.html",
+                "icon": "fa fa-file-text",
+                "target": "_self"
+            }, {
+                "title": "销售状况",
+                "href": "page/order.html",
+                "icon": "fa fa-file-text",
+                "target": "_self"
+            }, {
+                "title": "浏览记录",
+                "href": "page/visit.html",
+                "icon": "fa fa-file-text",
+                "target": "_self"
+            }, {
+                "title": "购买记录",
+                "href": "page/buy.html",
+                "icon": "fa fa-file-text",
+                "target": "_self"
+            }]
+        }
+
+    ]
+}

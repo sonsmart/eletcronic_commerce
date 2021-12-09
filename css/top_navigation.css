@@ -1,0 +1,124 @@
+#top_navigation
+{
+    background-color: rgb(227, 228, 229);
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+}
+#top_navigation_location{
+    /* position: relative; */
+    
+}
+#top_navigation_location:hover #now_location
+{
+    background-color: white;    
+    padding-bottom: 2px ;
+}
+/* #top_navigation_location:hover  #city
+{
+    display: block;
+    避免该页面的空白遮掩顶部索引栏1px的border-bottom 
+    top:1px;
+} */
+#now_location:hover +#city
+{
+    display: block;
+    /* 避免该页面的空白遮掩顶部索引栏1px的border-bottom */
+    top:-1px;
+    
+}
+
+#city:hover
+{
+    display: block;
+    /* 避免该页面的空白遮掩顶部索引栏1px的border-bottom */
+    top:1px;
+}
+#now_location
+{
+    width: 45px;
+    display: flex;            
+    /* 设置辅轴对齐方式：沿着辅轴起边对齐 */
+    align-items: flex-start;
+    /* 设置如何分配主轴上的空白空间,这里是分配到元素两侧*/
+    justify-content: space-around;
+    line-height: 30px;
+    /* 层级比地址标高，同时下内边距增加，使得可以遮掩底部边框 */
+    z-index: 2;    
+}
+#now_location:hover a{
+    color: red;
+    text-decoration: none;
+}
+#top_navigation_content
+{
+    margin: 0 auto;     
+}
+#top_navigation_content,#top_navigation_content ul
+{
+    display: flex;            
+    /* 设置辅轴对齐方式：沿着辅轴起边对齐 */
+    align-items: flex-start;
+    /* 设置如何分配主轴上的空白空间 */
+    justify-content: space-between;
+    line-height: 30px;
+    
+}
+#top_navigation_content ul li:not(.space)
+{
+    padding-left: 7px;
+    padding-right: 7px;
+    color: #999;
+}
+#top_navigation_content ul li a
+{
+    text-align: none;
+    color: #999;
+}
+.space
+{
+    overflow: hidden;
+    margin: 11px 5px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+}
+#top_navigation_location #city
+{
+    
+    background-color: white;    
+    border-bottom: 1px solid rgb(227, 228, 229);
+    border-left:  1px solid rgb(227, 228, 229);;
+    border-right:  1px solid rgb(227, 228, 229);;
+    display: none;
+    position: relative;
+    /* position: absolute; */
+    top: 30px;
+    z-index: 1;
+}
+#city a{
+    color:rgb(153,153,153);
+    text-decoration: none;
+}
+#city a:hover{
+    color: rgb(241,2,21);
+}
+#city > div{
+    color:rgb(153,153,153);
+}
+#city table tr
+{
+    display: flex;
+    /* 设置辅轴对齐方式：沿着辅轴起边对齐 */
+    align-items: flex-start;
+    /* 设置如何分配主轴上的空白空间 */
+    justify-content: space-between;
+}
+#china td{
+    display: block;
+    width:65px;    
+    text-align: center;
+}
+#region td,#international td{
+    display: block;
+    width:172px;                                  
+}

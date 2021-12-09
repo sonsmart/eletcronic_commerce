@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>结算 || 图书在线</title>
+    
+    <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="./css/page_orderDetail.css" rel="stylesheet" type="text/css" />
+    <link href="./css/page.css" rel="stylesheet" type="text/css" />
+    <script src="./js/settlement.js"></script>
+    <script type="text/javascript" src="./js/jquey-1.8.0.min.js"></script>
+</head>
+
+<body>
+    <!-- 顶部导航 --> 
+    <div id="top">
+        <div class="car_wrap clear">
+            <div class="welcome fl">
+                <span class="cor3">
+                    <!-- 欢迎光临，请
+                    <a target="_self" href="login.html" title="请登录网站"style="color:#FF2832;" >登录</a> -->
+                    <a target="_self" href="inputRegisterMess.html" title="免费注册账户">免费注册</a>
+                </span>
+            </div>
+            <div class="topRight fr clear">
+                <ul class="leftNav fl">
+                    <li>
+                        <a class="padl10" title="查看购物车" name="购物车" href="lookShoppingCar.html">购物车</a>
+                        <span class="sep">|</span>
+                    </li>
+                    <!-- <li class="myOrder">
+                        <a title="查看我的订单" name="我的订单" href="lookOrderForm.html" target="_blank">我的订单</a><i class="myLibIcon"></i>
+                        <span class="sep">|</span></li> -->
+                        <li class="myLib">
+                            <a title="进入我的个人主页" name="我的当当" href="login.html" target="_blank">我的图书馆</a><i class="myLibIcon"></i>
+                            <div id="topLookTab">
+                                <ul class="looktabnav clear">
+                                    <li class="">
+                                        <h4>经管励志</h4>
+                                        <div class="e">
+                                            <a href="byPageShow.html" target="_blank">励志成功</a>
+                                            <a href="byPageShow.html" target="_blank">管理</a>
+                                            <a href="byPageShow.html" target="_blank">经济</a>
+                                            <a href="byPageShow.html" target="_blank">投资理财</a>
+                                            <a href="byPageShow.html" target="_blank">心灵修养</a>
+                                            <a href="byPageShow.html" target="_blank">职场</a>
+                                            <a href="byPageShow.html" target="_blank">名人演说</a>
+                                            <a href="byPageShow.html" target="_blank">金融</a>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <h4>经管励志</h4>
+                                        <div class="e">
+                                            <a href="byPageShow.html" target="_blank">励志/成功</a>
+                                            <a href="byPageShow.html" target="_blank">管理</a>
+                                            <a href="byPageShow.html" target="_blank">经济</a>
+                                            <a href="byPageShow.html" target="_blank">投资理财</a>
+                                            <a href="byPageShow.html" target="_blank">心灵修养</a>
+                                            <a href="byPageShow.html" target="_blank">职场</a>
+                                            <a href="byPageShow.html" target="_blank">名人演说</a>
+                                            <a href="byPageShow.html" target="_blank">金融</a>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <h4>经管励志</h4>
+                                        <div class="e">
+                                            <a href="byPageShow.html" target="_blank">励志/成功</a>
+                                            <a href="byPageShow.html" target="_blank">管理</a>
+                                            <a href="byPageShow.html" target="_blank">经济</a>
+                                            <a href="byPageShow.html" target="_blank">投资理财</a>
+                                            <a href="byPageShow.html" target="_blank">心灵修养</a>
+                                            <a href="byPageShow.html" target="_blank">职场</a>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <h4>经管励志</h4>
+                                        <div class="e">
+                                            <a href="byPageShow.html" target="_blank">励志成功</a>
+                                            <a href="byPageShow.html" target="_blank">管理</a>
+                                            <a href="byPageShow.html" target="_blank">经济</a>
+                                            <a href="byPageShow.html" target="_blank">投资理财</a>
+                                            <a href="byPageShow.html" target="_blank">心灵修养</a>
+                                            <a href="byPageShow.html" target="_blank">职场</a>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <h4>经管励志</h4>
+                                        <div class="e">
+                                            <a href="byPageShow.html" target="_blank">励志成功</a>
+                                            <a href="byPageShow.html" target="_blank">管理</a>
+                                            <a href="byPageShow.html" target="_blank">经济</a>
+                                            <a href="byPageShow.html" target="_blank">投资理财</a>
+                                            <a href="byPageShow.html" target="_blank">心灵修养</a>
+                                            <a href="byPageShow.html" target="_blank">职场</a>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <h4>经管励志</h4>
+                                        <div class="e">
+                                            <a href="byPageShow.html" target="_blank">励志成功</a>
+                                            <a href="byPageShow.html" target="_blank">管理</a>
+                                            <a href="byPageShow.html" target="_blank">经济</a>
+                                            <a href="byPageShow.html" target="_blank">投资理财</a>
+                                            <a href="byPageShow.html" target="_blank">心灵修养</a>
+                                            <a href="byPageShow.html" target="_blank">职场</a>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <h4>经管励志</h4>
+                                        <div class="e">
+                                            <a href="byPageShow.html" target="_blank">励志成功</a>
+                                            <a href="byPageShow.html" target="_blank">管理</a>
+                                            <a href="byPageShow.html" target="_blank">经济</a>
+                                            <a href="byPageShow.html" target="_blank">投资理财</a>
+                                            <a href="byPageShow.html" target="_blank">心灵修养</a>
+                                            <a href="byPageShow.html" target="_blank">职场</a>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <h4>经管励志</h4>
+                                        <div class="e">
+                                            <a href="byPageShow.html" target="_blank">励志成功</a>
+                                            <a href="byPageShow.html" target="_blank">管理</a>
+                                            <a href="byPageShow.html" target="_blank">经济</a>
+                                            <a href="byPageShow.html" target="_blank">投资理财</a>
+                                            <a href="byPageShow.html" target="_blank">心灵修养</a>
+                                            <a href="byPageShow.html" target="_blank">职场</a>
+                                        </div>
+                                    </li>
+                                    <ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="rightNav fr">
+                        <li class="myInformation"><a title="登录网站" href="login.html">个人中心</a><i class="myLibIcon"></i><span class="sep">|</span> </li>
+                        <li><a title="退出系统" name="退出" href="login.html">退出</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /顶部导航 -->
+    <!-- logo与进度反馈区域 -->
+    <div id="logo_line" class="car_wrap clear">
+        <div class="shopCar_tit fl">
+            <h1>订单详情</h1>
+        </div>
+        <div class="order_path order_path_2 ">
+        </div>
+    </div>
+    <div class="car_hr"></div>
+    <!-- /logo与进度反馈区域 -->
+    <div id="container" style="width: auto;">
+        <div id="cart">
+            <form action="" method="post" id="check_pay_form" style="display:inline-block;">
+                <input type="hidden" name="formToken" value="Cart_cftk_86091524033019">
+                <div class="cart_left" style="*overflow: hidden">
+                    <input type="hidden" name="order_id" value="">
+                    <input type="hidden" name="web_site" value="sh" id="J_WebSite">
+                    <div class="option" id="address_selector">
+                        <div class="title">1 地址选择</div>
+                        <div class="site_edit site_edit_tip" id="JS_unvalidate_tips" style="display:none;">
+                            <div class="tips_tit tips_tit_tip">
+                                <p>温馨提示：海外购交易单需要实名验证身份证信息。您的身份验证未通过，需要在付款后前往“<a href="http://www.jumei.com/i/order/list">我的订单</a>”验证身份证信息！</p>
+                            </div>
+                        </div>
+                        <div id="first_add_address_wrap">
+                            <div class="site_edit">
+                                <div class="tips_tit">温馨提示：收件人请使用和身份证号对应的真实姓名，否则您购买的商品将无法通过海关检查!</div>
+                                <div class="clearfix cow_box">
+                                    <div class="fl receiver_name_box">
+                                        <div class="fl lab_box">
+                                            <label>收件人：<span class="tips">*</span></label>
+                                        </div>
+                                        <div class="fl">
+                                            <input type="text" class="input" autocomplete="off" id="JS_receiver_name" placeholder="不能为昵称、x先生、x小姐等" name="receiver_name" maxlength="20" style="width: 190px;">
+                                            <a href="javascript:;" class="validate_btn sp_icon" id="JS_validate_btn"></a>
+                                        </div>
+                                        <div class="fl error_box JS_error_box" style="display:none;"><i class="sp_icon"></i><span class="txt">请填写正确的收货人姓名</span></div>
+                                        <div class="through_validate" id="JS_through_validate"></div>
+                                    </div>
+                                    <div class="fl">
+                                        <div class="fl lab_box">
+                                            <label>身份证号：<span class="tips">*</span></label>
+                                        </div>
+                                        <div class="fl">
+                                            <input type="text" class="input" id="JS_china_id_number" name="china_id_number" maxlength="20" style="width: 190px;">
+                                        </div>
+                                        <div class="fl error_box JS_error_box">
+                                            <a href="javascript:;" class="sp_icon_pos_tips_box"><i class="sp_icon"></i><span class="txt">为什么要身份证</span>
+                        <div class="sp_icon_pos_tips">
+                            极速免税店商品需清关后入境，根据海关要求，需要您填写您的身份证进行个人物品入境申报。<br>
+                            因为海关会对您的身份信息进行验证，请确保填写正确，否则商品可能无法正常通关。<br>
+                            身份证信息将加密保管，绝不对外泄露。
+                            <div class="arrow_up"></div>
+                        </div>
+                    </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix cow_box">
+                                    <div class="fl lab_box">
+                                        <label>详细地址：<span class="tips">*</span></label>
+                                    </div>
+                                    <div class="fl clearfix" style="width: 790px;">
+                                        <div class="fl" id="JS_confirm_show_box"></div>
+                                        <div class="fl clearfix" style="*width:660px;">
+                                            <div class="fl">
+                                                <input type="text" class="input" maxlength="100" name="address" id="JS_address" placeholder="请填写详细地址" style="width: 320px;">
+                                            </div>
+                                            <div class="fl error_box JS_error_box" style="display:none;"><i class="sp_icon"></i><span class="txt">请填写详细地址，不少于3个汉字，不能全部是数字/字母</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix cow_box">
+                                    <div class="fl lab_box">
+                                        <label>手机号码：<span class="tips">*</span></label>
+                                    </div>
+                                    <div class="fl">
+                                        <input type="text" class="input" id="JS_phone" maxlength="11" name="phone" style="width: 115px;">
+                                    </div>
+                                    <div class="fl JS_tips" style="color: #999999;margin-left: 10px;"></div>
+                                    <div class="fl error_box JS_error_box" style="display:none;"><i class="sp_icon"></i><span class="txt">请填写正确的电话号码，手机号码为11位数字</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <style type="text/css">
+                            .editAddressForm {
+                                position: relative;
+                                background: #fff;
+                                display: none;
+                            }
+                            
+                            #cart .cart_left #address_selector .content .option_box {
+                                height: 148px;
+                            }
+                            
+                            #cart .cart_left #address_selector .content .address_lbl {
+                                height: 116px;
+                            }
+                            
+                            #cart .cart_left #address_selector .content div.selected .address_lbl {
+                                background: url(/assets/images/jumei/global/address_bg.png) no-repeat 0px 0;
+                                height: 118px;
+                            }
+                        </style>
+                        <div id="default_address_wrap" style="display: none;">
+                            <div class="content" id="address_wrap">
+                            </div>
+                            <div class="address_btns_wrap clearfix">
+                                <div class="address_more" style="display:none"><a href="javascript:void(0)" class="stri_open"><span></span>展开收货地址</a></div>
+                                <a class="add_address_btn" href="javascript:void(0)">使用新地址</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="num_border"></div>
+                <div class="cart_left cart_left_last">
+                    <div class="option">
+                        <div class="paytype">
+                            <div id="paytype_gateway" class="paytype_gateway_after">
+                                <div id="gateway_list" class="gateway_list" style="_height: 1%">
+                                    <div class="title">2 支付方式</div>
+                                    <div class="adv" style="display:none">
+                                    </div>
+                                    <div class="gateway_ul_box">
+                                        <ul class="gateway_ul">
+                                            <li class="gateway_line gateway_COD">
+                                                <input type="radio" name="payment_style" value="COD" id="check-cod">
+                                                <label class="tit" for="check-cod">货到付款</label>
+                                                <label class="tit no_cod"></label>
+                                            </li>
+                                            <li class="gateway_line ul_off gateway_bank">
+                                                <input type="radio" name="payment_style" id="">
+                                                <label class="tit" for="">支付宝/财付通/百度钱包</label>
+                                                <label class="tit gateway_desc cup_activity_cod" style="">
+                                            <!-- 首次使用百度钱包快捷支付付款，满49立减20元，数量有限，先到先得。 -->
+                                            <a href="javascript:void(0)">                           
+                        </a> &nbsp;
+                        </label>
+                                                <ul class="third_ul clearfix g_ul">
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay" name="gateway" id="check-Alipay">
+                                                            <label class="bg Alipay" for="check-Alipay"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="AlipayQRCode" name="gateway" id="check-Alipay-QRCode">
+                                                            <label class="bg AlipayQRCode" for="check-Alipay-QRCode"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Tenpay_0" name="gateway" id="check-Tenpay_0">
+                                                            <label class="bg Tenpay_0" for="check-Tenpay_0"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_baifubao" name="gateway" id="check-Bfb_baifubao">
+                                                            <label class="bg Bfb_baifubao" for="check-Bfb_baifubao"></label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="gateway_line ul_off">
+                                                <input type="radio" name="payment_style" id="">
+                                                <label class="tit" for="">网上银行</label>
+                                                <label class="tit gateway_desc" for=""><span>支持地方银行，需开通网银支付功能</span></label>
+                                                <ul class="bank_ul clearfix g_ul">
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_CCB" name="gateway" id="check-Alipay_CCB">
+                                                            <label class="bg Alipay_CCB" for="check-Alipay_CCB"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_ICBCB2C" name="gateway" id="check-Alipay_ICBCB2C">
+                                                            <label class="bg Alipay_ICBCB2C" for="check-Alipay_ICBCB2C"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_BOCB2C" name="gateway" id="check-Alipay_BOCB2C">
+                                                            <label class="bg Alipay_BOCB2C" for="check-Alipay_BOCB2C"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_ABC" name="gateway" id="check-Alipay_ABC">
+                                                            <label class="bg Alipay_ABC" for="check-Alipay_ABC"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_CMB" name="gateway" id="check-Alipay_CMB">
+                                                            <label class="bg Alipay_CMB" for="check-Alipay_CMB"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_COMM" name="gateway" id="check-Alipay_COMM">
+                                                            <label class="bg Alipay_COMM" for="check-Alipay_COMM"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_CEBBANK" name="gateway" id="check-Bfb_CEBBANK">
+                                                            <label class="bg Bfb_CEBBANK" for="check-Bfb_CEBBANK"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_PSBC-DEBIT" name="gateway" id="check-Alipay_PSBC-DEBIT">
+                                                            <label class="bg Alipay_PSBC-DEBIT" for="check-Alipay_PSBC-DEBIT"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_CIB" name="gateway" id="check-Alipay_CIB">
+                                                            <label class="bg Alipay_CIB" for="check-Alipay_CIB"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_GDB" name="gateway" id="check-Bfb_GDB">
+                                                            <label class="bg Bfb_GDB" for="check-Bfb_GDB"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_SPDB" name="gateway" id="check-Alipay_SPDB">
+                                                            <label class="bg Alipay_SPDB" for="check-Alipay_SPDB"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_CITIC" name="gateway" id="check-Alipay_CITIC">
+                                                            <label class="bg Alipay_CITIC" for="check-Alipay_CITIC"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_CMBC" name="gateway" id="check-Bfb_CMBC">
+                                                            <label class="bg Bfb_CMBC" for="check-Bfb_CMBC"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_SPABANK" name="gateway" id="check-Bfb_SPABANK">
+                                                            <label class="bg Bfb_SPABANK" for="check-Bfb_SPABANK"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Alipay_BJBANK" name="gateway" id="check-Alipay_BJBANK">
+                                                            <label class="bg Alipay_BJBANK" for="check-Alipay_BJBANK"></label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="gateway_line ul_off">
+                                                <input type="radio" name="payment_style" id="">
+                                                <label class="tit" for="">快捷支付</label>
+                                                <label class="tit gateway_desc" for=""><span>支持信用卡付款，无需开通网银支付功能</span></label>
+                                                <ul class="speedy_ul clearfix g_ul">
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_CMB-EXPRESS-CREDIT" name="gateway" id="check-CMB-EXPRESS-CREDIT">
+                                                            <label class="bg Alipay_CMB-MOTO-CREDIT" for="check-CMB-EXPRESS-CREDIT"></label>
+                                                            <span>快捷</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_CCB-MOTO-CREDIT" name="gateway" id="check-CCB-MOTO-CREDIT">
+                                                            <label class="bg Bfb_CCB-MOTO-CREDIT" for="check-CCB-MOTO-CREDIT"></label>
+                                                            <span>快捷</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_BOC-MOTO-CREDIT" name="gateway" id="check-BOC-MOTO-CREDIT">
+                                                            <label class="bg Bfb_BOC-MOTO-CREDIT" for="check-BOC-MOTO-CREDIT"></label>
+                                                            <span>快捷</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_ICBC-MOTO-CREDIT" name="gateway" id="check-ICBC-MOTO-CREDIT">
+                                                            <label class="bg Bfb_ICBC-MOTO-CREDIT" for="check-ICBC-MOTO-CREDIT"></label>
+                                                            <span>快捷</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_CITIC-EXPRESS-CREDIT" name="gateway" id="check-CITIC-EXPRESS-CREDIT">
+                                                            <label class="bg Bfb_CITIC-EXPRESS-CREDIT" for="check-CITIC-EXPRESS-CREDIT"></label>
+                                                            <span>快捷</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_CEB-EXPRESS-CREDIT" name="gateway" id="check-CEB-EXPRESS-CREDIT">
+                                                            <label class="bg Bfb_CEB-EXPRESS-CREDIT" for="check-CEB-EXPRESS-CREDIT"></label>
+                                                            <span>快捷</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_SPABANK-MOTO-CREDIT" name="gateway" id="check-SPABANK-MOTO-CREDIT">
+                                                            <label class="bg Bfb_SPABANK-MOTO-CREDIT" for="check-SPABANK-MOTO-CREDIT"></label>
+                                                            <span>快捷</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="bd_wrap">
+                                                            <input type="radio" value="Bfb_GDB-EXPRESS-CREDIT" name="gateway" id="check-GDB-EXPRESS-CREDIT">
+                                                            <label class="bg Bfb_GDB-EXPRESS-CREDIT" for="check-GDB-EXPRESS-CREDIT"></label>
+                                                            <span>快捷</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sure_payinfo_wrap">
+                    <div class="confirm_pay_box">
+                        <div class="confirm_pay clearfix">
+                            <div class="confirm_left">
+                                <a href="lookShoppingCar.html" class="btn_grey_small">返回修改购物车</a>
+                            </div>
+                            <div class="confirm_right">
+                                <div class="clearfix">
+                                    <input type="hidden" value="0d9b9deb78d9dd8dd7e07b0405784110" name="token" id="JS_token_data">
+                                    <input type="hidden" value="from_cart_confirmation" name="from" id="JS_form_data">
+                                    <text class="btn_pink_big" id="submit">确认交易</text>
+                                    <!-- <div class="price_sum">
+                                        应付总额：<span class="total_count">¥<span id="cart_total2">99.00</span></span>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+       
+        <script type="text/javascript">
+           
+        </script>
+
+        <!-- 底部备案号 -->
+        <div style="height: 50px; width: 100%;  margin-top: 100px;">
+            <div id="record" style="text-align:center; align-items:50px;margin:0 auto; ">
+                <a href="https://beian.miit.gov.cn" style="text-decoration: none; " class="myRecord">备案号:粤ICP备2021080647号</a>
+                <div>
+                    <a class="myRecord" style="text-decoration: none; " href="http://www.beian.gov.cn/portal/registerSystemInfo?spm=a2c4g.11186623.J_9220772140.112.ac5be7c2TKDyeR"><img src="http://47.93.223.110/picture/gongan" alt="">粤公网安备44011302003070</a>
+                </div>
+                <div>
+                    版权所有 © 华南理工大学大学 powered by lizicong
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

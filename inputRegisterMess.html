@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>注册新用户 || bookshop</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">    
+    <link href="./css/newUser.css" rel="stylesheet">
+    <link href="./css/reset.css" rel="stylesheet">
+    <script src="./js/jquey-1.8.0.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- 注册页面头部 -->
+    <div class="register_wrap">
+        <div class="register_content register_content2 clear">
+            <div class="register_operate" id="__ddnav_menu">
+                <p id="nickname">
+                    <!-- 欢迎光临，请
+                    <a name="ddnav_login" href="login.html" target="_self" class="login_link">登录</a> -->
+                    <a name="ddnav_register" href="login.html" target="_self" class="login_link">前往登录</a>
+                </p>
+            </div>
+            <div class="banner clear">
+                <div class="bannerHeader fr sprite"></div>
+            </div>
+
+        </div>
+        <!--  <div class="registerhead_bottom"></div> -->
+    </div>
+    <!-- /注册页面头部 -->
+    <!-- 注册页面主体 -->
+    <div class="registerMian">
+        <!-- <form method="POST" action="/inputRegisterMess" id="form_style"> -->
+        <!-- <form> -->
+        <div id="bd">
+            <div class="register_box">
+                <div class="head">
+                    <p class="coupon_words">
+                        <label>完成手机验证注册，可以选商品实现购物！ </label>
+                    </p>
+                    <h3> 注册新用户</h3>
+                </div>
+                <div class="body">
+                    <div class="input_style">
+                        <label for="name">手机号：</label><input id="phone" type="tel" maxlength="11" name="phone" />
+                    </div>
+                    <div class="input_style">
+                        <label for="pw">昵称：</label><input id="username" type="text" name="username" />
+                    </div>
+                    <div class="input_style">
+                        <label for="name">邮箱：</label><input id="e_mail" type="email" name="e_mail" />
+                    </div>
+                    <div class="input_style">
+                        <label for="pw">密码：</label><input id="password" type="password" name="password" />
+                    </div>
+                    <!-- <div class="input_style">
+                                <label for="name">确认密码：</label><input id="name" type="text" name="sure_password" />
+                            </div> -->
+                    <input style="margin: 0 auto;" type="submit" tabindex="7" value="立刻注册" title="注册" class="btn_login" name="g" id="btn_register">
+                    <!-- <div class="backcontent">
+                            <p>注册信息反馈：<span class="cor7 padl15"><html:getProperty name="userBean" property="backNews"/></span></p>
+                            <br />
+                            <p><span>会员名称：<span class="cor7 padl15"><html:getProperty name="userBean" property="logname"/></span></span>
+                            </p>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function submit()
+            {
+                // 获得相关的数据
+                // 获得手机号
+                let phone = $("#phone").val();
+                // 获得昵称
+                let username = $("#username").val();
+                // 获得邮箱
+                let email = $("#e_mail").val();
+                // 获得密码                
+                // 手机号与邮箱的校验
+                let password = $("#password").val();
+                let reg_phone = /^1[3|4|5|7|8][0-9]{9}$/;
+                let reg_email = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/ ;
+                if(!reg_phone.test(phone))
+                {
+                    alert('请输入正确的电话');
+                    return;
+                }
+                if(!reg_email.test(email))
+                {
+                    alert('请输入正确的电子邮箱');
+                    return;
+                }
+                if(username==""||password=="")
+                {
+                    alert('名称与密码不能为空');
+                    return;
+                }
+                console.log(phone + "----" + username + "----" + email + "----" + password);
+                $.post("/inputRegisterMess", {
+                    phone: phone,
+                    username: username,
+                    e_mail: email,
+                    password: password
+                }, function(data, status) {
+                    console.dir(data);
+                    if (data == "has_exist") {
+                        alert("该手机号已经注册，请重新输入")
+                    } else if (data == "register_success") {
+                        alert("注册成功")
+                        window.location.href = "./login"
+                    }
+                })
+
+            }
+            $("#btn_register").click(submit);
+            $("#phone").keydown(function(){
+                if ( event.keyCode=='13' ) 
+                {
+                    submit();
+                }
+            })
+            $("#username").keydown(function(){
+                if ( event.keyCode=='13' ) 
+                {
+                    submit();
+                }
+            })
+            $("#e_mail").keydown(function(){
+                if ( event.keyCode=='13' ) 
+                {
+                    submit();
+                }
+            })
+            $("#password").keydown(function(){
+                if ( event.keyCode=='13' ) 
+                {
+                    submit();
+                }
+            })
+        </script>       
+        <!-- </form> -->
+    </div>
+    <!-- /注册页面主体 -->
+    <!-- 底部备案号 -->
+    <div style="height: 50px; width: 100%;  margin-top: 100px;">
+        <div id="record" style="text-align:center; align-items:50px;margin:0 auto; ">
+            <a href="https://beian.miit.gov.cn" style="text-decoration: none; " class="myRecord">备案号:粤ICP备2021080647号</a>
+            <div>
+                <a class="myRecord" style="text-decoration: none; " href="http://www.beian.gov.cn/portal/registerSystemInfo?spm=a2c4g.11186623.J_9220772140.112.ac5be7c2TKDyeR"><img src="http://47.93.223.110/picture/gongan" alt="">粤公网安备44011302003070</a>
+            </div>
+            <div>
+                版权所有 © 华南理工大学大学 powered by lizicong
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
