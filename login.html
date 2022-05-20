@@ -7,7 +7,7 @@
     <title>登录书店 || bookshop</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    
+
     <link href="./css/page.css" rel="stylesheet" type="text/css" />
     <link href="./css/reset.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="./js/jquey-1.8.0.min.js"></script>
@@ -44,7 +44,7 @@
                 <!-- <form action="/login" method="post" style="margin:20px 0"> -->
                 <div class="loginName">
                     <label for="logname" class="login_name"><span></span></label>
-                    <Input type=text id="phone" autofocus autocomplete="off" placeholder="手机号" name="phone">
+                    <Input type=text id="phone" autofocus autocomplete="off" placeholder="手机号或账户" name="phone">
                 </div>
                 <div class="loginPaw">
                     <label for="password" class="login_paw"><span></span></label>
@@ -56,46 +56,48 @@
                 </div>
                 <Input type=submit value="登录" id="submit">
                 <!-- </form> -->
-                <script type="text/javascript"> 
-                    function submit()
-                    {
+                <script type="text/javascript">
+                    function submit() {
                         // 获得手机号
                         let phone = $("#phone").val();
                         // 获得密码
                         let password = $("#password").val();
-                        let reg =/^1[3|4|5|7|8][0-9]{9}$/;
-                        if(!reg.test(phone))
-                        {
-                            alert("请输入正确的手机号码");
-                            return;
-                        }                      
-                            
+                        // let reg = /^1[3|4|5|7|8][0-9]{9}$/;
+                        // if (!reg.test(phone)) {
+                        //     alert("请输入正确的手机号码");
+                        //     return;
+                        // }
+
                         $.post("/login", {
                             phone: phone,
                             password: password
                         }, function(data, status) {
-                            console.dir(data);
+                            console.log('登录信息返回');
                             if (data == "login fail") {
                                 alert("密码错误，请重新登录")
                                 return
                             } else if (data == "login success") {
+                                console.log('跳到客户端界面')
                                 window.location.href = "./index.html"
                             } else if (data == "manager login") {
+                                console.log('跳到管理员界面')
                                 window.location.href = "./admin/index.html"
+                            } else if (data == "salesman login") {
+                                console.log('跳到销售人员界面')
+                                window.location.href = "./salesman/index.html"
+                            } else {
+                                console.log('没有跳到任何界面')
                             }
-
                         })
                     }
                     $("#submit").click(submit);
-                    $("#phone").keydown(function(){
-                        if ( event.keyCode=='13' ) 
-                        {
+                    $("#phone").keydown(function() {
+                        if (event.keyCode == '13') {
                             submit();
                         }
                     })
-                    $("#password").keydown(function(){
-                        if ( event.keyCode=='13' ) 
-                        {
+                    $("#password").keydown(function() {
+                        if (event.keyCode == '13') {
                             submit();
                         }
                     })
